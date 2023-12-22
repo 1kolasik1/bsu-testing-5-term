@@ -193,6 +193,366 @@ public class Tests
         }
         }
         """, true)]
+    [TestCase(
+        @"
+    x = 14 + 4;
+    y = x + 1;
+    z = 0;
+    z = 10;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 5;
+    y = x * 2;
+    z = y - 5;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 0;
+    y = x + 2;
+    z = y * 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 3;
+    y = x * 4;
+    z = y / 2;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 7;
+    y = x + 3;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 1;
+    y = x * 5;
+    z = y - 2;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 2;
+    y = x * 8;
+    z = y / 4;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 10;
+    y = x - 7;
+    z = y + 5;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 3;
+    y = x + 5;
+    z = y * 2 - 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 6;
+    y = x / 2;
+    z = y + 3;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 4;
+    y = x * 3 - 2;
+    z = y / 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 9;
+    y = x - 3;
+    z = y * 2 + 1;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 2;
+    y = x * 5;
+    z = y + 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 8;
+    y = x / 2;
+    z = y - 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 3;
+    y = x * 2 + 1;
+    z = y - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 6;
+    y = x / 3;
+    z = y * 4;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 5;
+    y = x + 2;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 10;
+    y = x - 3;
+    z = y / 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 4;
+    y = x * 3;
+    z = y / 2 + 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 7;
+    y = x - 1;
+    z = y * 2 - 3;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 3;
+    y = x * 2 + 1;
+    z = y - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 6;
+    y = x / 3;
+    z = y * 4;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 5;
+    y = x + 2;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 10;
+    y = x - 3;
+    z = y / 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 4;
+    y = x * 3;
+    z = y / 2 + 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 7;
+    y = x - 1;
+    z = y * 2 - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 8;
+    y = x * 2 + 1;
+    z = y / 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 12;
+    y = x / 4;
+    z = y + 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 15;
+    y = x - 6;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 9;
+    y = x / 3;
+    z = y * 4 - 2;
+    "
+        , true)]
+    [TestCase(
+        @"
+    x = 3;
+    y = x * 2 + 1;
+    z = y - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 6;
+    y = x / 3;
+    z = y * 4;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 5;
+    y = x + 2;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 10;
+    y = x - 3;
+    z = y / 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 4;
+    y = x * 3;
+    z = y / 2 + 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 7;
+    y = x - 1;
+    z = y * 2 - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 8;
+    y = x * 2 + 1;
+    z = y / 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 12;
+    y = x / 4;
+    z = y + 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 15;
+    y = x - 6;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 9;
+    y = x / 3;
+    z = y * 4 - 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 14;
+    y = x * 3 / 2;
+    z = y - 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 5;
+    y = x + 4;
+    z = y * 2 - 3;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 8;
+    y = x / 2;
+    z = y + 1;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 13;
+    y = x - 5;
+    z = y * 2;
+    "
+        , true)]
+
+    [TestCase(
+        @"
+    x = 7;
+    y = x * 2 + 3;
+    z = y / 2;
+    "
+        , true)]
+
+
+
+
+
+
+
 
     public void ValidatesParse(string expression, bool expected)
 

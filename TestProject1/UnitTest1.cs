@@ -69,6 +69,16 @@ public class Tests
     [TestCase("2 * (1 + 3)", 8)]
     [TestCase("4 - (2 + 3 * 5)", -13)]
     [TestCase("4 - ((2 + 12) / (3 + 4))", 2)]
+    [TestCase("(1 + 2) * (3 + 4)", 21)]
+    [TestCase("5 / (2 + 1)", 1.6666666666666667)]
+    [TestCase("1 + 2 + 3 + 4 + 5", 15)]
+    [TestCase("3 * (2 - 1) + 4 / (2 + 1)", 10)]
+    [TestCase("1 * (2 + 3) + 4 * (5 - 2)", 19)]
+    [TestCase("1 + 2 + 3 * 4 - 5", 14)]
+    [TestCase("(3 * 2) / (1 + 2)", 2)]
+    [TestCase("2 * (3 + 4) - 5 * (1 - 2)", 6)]
+    [TestCase("2 + (3 * (4 - 1)) / 2", 8)]
+    [TestCase("((2 + 1) * 3 - 4) / 2", 3.5)]
     [Category("Positive scenario")]
     public void Computes(string expression, double expected)
     {
